@@ -13,26 +13,25 @@ class LeaderBoard extends Component{
                     </div>
                     {usernames && (
                         usernames.map((username, index) => (
-                            <div className="col-12" key={index}>
-                                <div className="leaderboard__user">
-                                    <div className="row">
-                                        <div className="col-4">
-                                            <div className="leaderboard__user-profile-tag text-center">
-                                                <img src={users[username].avatarURL} alt="profile avatar"/>
-                                                <h1>{users[username].name}</h1>
-                                            </div>
+                            <div className="col-12 leaderboard__user" key={index}>
+                                <div className="row">
+                                    <div className="col-4 leaderboard__user-profile-tag">
+                                        <div className="text-center">
+                                            <img src={users[username].avatarURL} alt="profile avatar"/>
+                                            <h1>{users[username].name}</h1>
                                         </div>
-                                        <div className="col-4 text-center d-flex align-items-center">
-                                            <div className="leaderboard__user-info-tag">
-                                                <h2>Questions Asked:</h2>
-                                                <p>{Object.keys(users[username].questions).length}</p>
-                                            </div>
+                                    </div>
+                                    <div className="col-4 text-center d-flex align-items-center">
+                                        <div className="leaderboard__user-info-tag">
+                                            <h2>Breakdown:</h2>
+                                            <p>Questions Asked: {Object.keys(users[username].questions).length}</p>
+                                            <p>Questions Answered: {Object.keys(users[username].answers).length}</p>
                                         </div>
-                                        <div className="col-4 text-center d-flex align-items-center">
-                                            <div className="leaderboard__user-info-tag">
-                                                <h2>Questions Answered:</h2>
-                                                <p>{Object.keys(users[username].answers).length}</p>
-                                            </div>
+                                    </div>
+                                    <div className="col-4 text-center d-flex align-items-center">
+                                        <div className="leaderboard__user-info-tag leaderboard__user-info-tag--total">
+                                            <h2>Total</h2>
+                                            <p>{Object.keys(users[username].answers).length + Object.keys(users[username].questions).length}</p>
                                         </div>
                                     </div>
                                 </div>

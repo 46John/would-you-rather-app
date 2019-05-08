@@ -4,9 +4,11 @@ $darksalmon : #d4866b;
 $freesia : #EFE7BC;
 $aqua : #74BDCB;
 $babyBlue : #E7F2F8;
+$slateBlue : #4e555b;
 
 *{
   font-family: "Open Sans";
+  color: darken($aqua, 30%);
 }
 
 body{

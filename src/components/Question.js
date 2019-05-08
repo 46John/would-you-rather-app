@@ -17,9 +17,6 @@ class Question extends Component {
 
         return (
             <Fragment>
-                {showResults &&(
-                    <Link to={`/`} className="btn btn-back"><i className="fa fa-long-arrow-left"></i> Back To Dashboard</Link>
-                )}
                 <div className="col-12 card question-card">
                     <div className="row d-flex justify-content-center">
                         <div className="col-4 question-card__author-column d-flex align-items-center">
@@ -41,6 +38,9 @@ class Question extends Component {
                         )}
                     </div>
                 </div>
+                {showResults &&(
+                    <Link to={`/`} className="btn btn-back"><i className="fa fa-long-arrow-left"></i> Back To Dashboard</Link>
+                )}
             </Fragment>
         )
     }
